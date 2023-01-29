@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class () extends Migration {
     /**
      * Run the migrations.
      *
@@ -15,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('depenses', function (Blueprint $table) {
             $table->id();
+            $table->string("compagnie_id")->nullable();
             $table->string("type_darticle_achete")->nullable();
             $table->string("secteur_connexe")->nullable();
             $table->string("description_du_bienservice")->nullable();

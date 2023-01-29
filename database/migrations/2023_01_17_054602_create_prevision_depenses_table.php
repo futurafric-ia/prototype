@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class () extends Migration {
     /**
      * Run the migrations.
      *
@@ -20,7 +19,7 @@ return new class extends Migration
             $table->string('location_équipement')->nullable();
             $table->string('arpentage')->nullable();
             $table->string('soudage_de_tuyaux_a_terre')->nullable();
-            $table->string('sablage_et_revêtement_de_tuyaux_a_terre')->nullable();
+            $table->text('sablage_et_revêtement_de_tuyaux_a_terre', 255)->nullable();
             $table->string('travaux_de_construction_de_batiments_terre')->nullable();
             $table->string('fabrication_structurelle')->nullable();
             $table->string('gestion_des_dechets_non_dangereux')->nullable();

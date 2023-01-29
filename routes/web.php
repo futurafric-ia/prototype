@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\DepenseController;
+use App\Http\Controllers\FichierController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -29,12 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get("simple-excel/index", [ExcelController::class,'index'])->name('index');
-    // Route::post("simple-excel/import", [DepenseController::class,'import'])->name('excel.import');
     Route::post("simple-excel/import", [ExcelController::class,'import'])->name('excel.import');
-
-// Exporter un fichier Excel
-Route::post("simple-excel/export", [ExcelController::class,'export'])->name('excel.export');
-Route::get('showForm',[ExcelController::class,'showForm'])->name('formulaire');
+    Route::get("/download", [FichierController::class,'download'])->name('download');
 });
 
 require __DIR__.'/auth.php';

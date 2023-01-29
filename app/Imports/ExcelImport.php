@@ -6,8 +6,7 @@ use App\Models\Excel;
 use Illuminate\Foundation\Testing\WithFaker;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithMultipleSheets;
-
-
+use Spatie\LaravelIgnition\Recorders\DumpRecorder\Dump;
 
 class ExcelImport implements WithMultipleSheets
 {
@@ -19,11 +18,11 @@ class ExcelImport implements WithMultipleSheets
     public function Sheets(): array
     {
         return [
-            'Dépenses' => new DepenseImport(),
-             3 => new InformationsImport(),
-             4 => new EmploiImport(),
-             5 => new CapaciteImport(),
-             6 => new PrevisionDepenseImport()
+             "Informations Générales" => new InformationsImport(),
+             "Dépenses" => new DepenseImport(),
+             "Emplois" => new EmploiImport(),
+             "Renforcement des Capacités" => new CapaciteImport(),
+             "Prévision des Dépenses"=> new PrevisionDepenseImport(),
 
         ];
     }

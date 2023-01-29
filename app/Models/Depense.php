@@ -9,6 +9,7 @@ class Depense extends Model
 {
     use HasFactory;
     protected $fillable = ['type_darticle_achete',
+                           'compagnie_id',
                            'secteur_connexe',
                            'description_du_bienservice',
                            'nom_du_fournisseur',

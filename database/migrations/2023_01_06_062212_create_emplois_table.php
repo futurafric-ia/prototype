@@ -21,8 +21,8 @@ return new class () extends Migration {
             $table->unsignedBigInteger("nombre_divoiriens_employes");
             $table->unsignedBigInteger("nombre_total_dembauches");
             $table->unsignedBigInteger("nombre_de_divoiriens_embauches");
-            $table->unsignedBigInteger("remuneration_totale_versee");
-            $table->unsignedBigInteger("remuneration_totale_versee_aux_ivoiriens_uniquement");
+            $table->string("remuneration_totale_versee");
+            $table->string("remuneration_totale_versee_aux_ivoiriens_uniquement");
             $table->timestamps();
         });
     }

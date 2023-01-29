@@ -11,7 +11,6 @@ use App\Models\PrevisionDepense;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
-
 class ExcelController extends Controller
 {
     public function index()
@@ -21,16 +20,16 @@ class ExcelController extends Controller
         $informations = Informations::orderBy('id', 'desc')->count();
         $capacite = Capacite::orderBy('id', 'desc')->count();
         $prevision = PrevisionDepense::orderBy('id', 'desc')->count();
-        // dd($depenses);
-        return view('index',
-        [
-            'depenses' => $depenses,
-            'informations' =>$informations,
-            'capacite' =>$capacite,
-            'emplois' => $emplois,
-            'prevision' => $prevision,
-        ]);
-
+        return view(
+            'index',
+            [
+                'depenses' => $depenses,
+                'informations' =>$informations,
+                'capacite' =>$capacite,
+                'emplois' => $emplois,
+                'prevision' => $prevision,
+            ]
+        );
     }
 
 
@@ -44,6 +43,5 @@ class ExcelController extends Controller
 
         Excel::import(new ExcelImport(), $fichier);
         return redirect()->route('index');
-
     }
 }

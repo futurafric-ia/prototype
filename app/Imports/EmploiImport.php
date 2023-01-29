@@ -20,15 +20,15 @@ class EmploiImport implements ToArray, WithHeadingRow
         // dd($collection);
         foreach ($collection as $data) {
             Emploi::create([
-    "titre_demploi" => $data["titre_demploi"],
-    "categorie_demploi" => $data["categorie_demploi"],
-    "classification_de_lemploi" => $data["classification_de_lemploi"],
-    "nombre_total_demployes" => $data["nombre_total_demployes"],
-    "nombre_divoiriens_employes" => $data["nombre_divoiriens_employes"],
-    "nombre_total_dembauches" => $data["nombre_total_dembauches"],
-    "nombre_de_divoiriens_embauches" => $data["nombre_de_divoiriens_embauches"],
-    "remuneration_totale_versee" => $data["remuneration_totale_versee"],
-    "remuneration_totale_versee_aux_ivoiriens_uniquement" => $data["remuneration_totale_versee_aux_ivoiriens_uniquement"]
+                    "titre_demploi" => $data["titre_demploi"],
+                    "categorie_demploi" => $data["categorie_demploi"],
+                    "classification_de_lemploi" => $data["classification_de_lemploi"],
+                    "nombre_total_demployes" => $data["nombre_total_demployes"],
+                    "nombre_divoiriens_employes" => $data["nombre_divoiriens_employes"],
+                    "nombre_total_dembauches" => $data["nombre_total_dembauches"],
+                    "nombre_de_divoiriens_embauches" => $data["nombre_de_divoiriens_embauches"],
+                    "remuneration_totale_versee" => $data["remuneration_totale_versee"],
+                    "remuneration_totale_versee_aux_ivoiriens_uniquement" => $data["remuneration_totale_versee_aux_ivoiriens_uniquement"]
             ]);
         }
     }

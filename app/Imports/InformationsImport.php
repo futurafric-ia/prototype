@@ -7,7 +7,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithMappedCells;
 
-class InformationsImport implements ToModel,WithHeadingRow,WithMappedCells
+class InformationsImport implements ToModel, WithHeadingRow, WithMappedCells
 {
     /**
     * @param array $row
@@ -17,15 +17,15 @@ class InformationsImport implements ToModel,WithHeadingRow,WithMappedCells
     public function mapping(): array
     {
         return [
-            'nom_de_lentreprise_soumettant_le_rapport'  => 'F1',
-            'id_de_lentreprise_soumettant_le_rapport'  => 'F2',
-            'type_de_compagnie'  => 'F3',
-            'periode_de_rapport'  => 'F4',
-            'annee_de_declaration'  => 'F5',
-            'date'  => 'F6',
-            'co_prestataire' => 'F7',
-            'nom_du_chef_dentreprise_ou_du_representant_dument_autorise' => 'F8',
-            'designation_du_chef_dentreprise_ou_du_représentant_dument_autorise' => 'F9',
+            'nom_de_lentreprise_soumettant_le_rapport'  => 'F8',
+            'id_de_lentreprise_soumettant_le_rapport'  => 'F9',
+            'type_de_compagnie'  => 'F10',
+            'periode_de_rapport'  => 'F11',
+            'annee_de_declaration'  => 'F12',
+            'date'  => 'F13',
+            'co_prestataire' => 'F14',
+            'nom_du_chef_dentreprise_ou_du_representant_dument_autorise' => 'F15',
+            'designation_du_chef_dentreprise_ou_du_représentant_dument_autorise' => 'F16',
         ];
     }
     public function model(array $row)
